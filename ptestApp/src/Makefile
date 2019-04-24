@@ -16,10 +16,10 @@ DBD += ptest.dbd
 ptest_DBD += base.dbd
 
 # Include dbd files from all support applications:
-#ptest_DBD += xxx.dbd
+ptest_DBD += ptools.dbd
 
 # Add all the support libraries needed by this IOC
-#ptest_LIBS += xxx
+ptest_LIBS += ptools
 
 # ptest_registerRecordDeviceDriver.cpp derives from ptest.dbd
 ptest_SRCS += ptest_registerRecordDeviceDriver.cpp

@@ -1,0 +1,12 @@
+record(stringout, "$(BL):$(DEV):cmdstring")
+{
+}
+
+record(aSub, "$(BL):$(DEV):execmd")
+{
+    field(SNAM,"execmd")
+    field(INPA, "$(BL):$(DEV):cmdstring CPP")
+    field(FTA, "STRING")
+    field(NOA, "40")
+}
+

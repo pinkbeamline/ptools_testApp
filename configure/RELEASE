@@ -23,8 +23,9 @@
 # the CONFIG_SITE file.
 
 # Variables and paths to dependent modules:
-#MODULES = /path/to/modules
-#MYMODULE = $(MODULES)/my-module
+SUPPORT=/home/epics/EPICS/support
+
+PTOOLS=$(SUPPORT)/ptools
 
 # If using the sequencer, point SNCSEQ at its top directory:
 #SNCSEQ = $(MODULES)/seq-ver

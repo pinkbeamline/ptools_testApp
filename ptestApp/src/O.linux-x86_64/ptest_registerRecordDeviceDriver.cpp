@@ -171,7 +171,10 @@ static const dset * const devsl[] = {
 typedef void (*reg_func)(void);
 epicsShareExtern reg_func pvar_func_arrInitialize, pvar_func_asSub,
     pvar_func_dbndInitialize, pvar_func_syncInitialize,
-    pvar_func_tsInitialize;
+    pvar_func_tsInitialize, pvar_func_register_func_calcspec,
+    pvar_func_register_func_execmd, pvar_func_register_func_linspace,
+    pvar_func_register_func_range, pvar_func_register_func_sumroi,
+    pvar_func_register_func_sumspec, pvar_func_register_func_threshold;
 
 epicsShareExtern int * const pvar_int_asCaDebug;
 epicsShareExtern int * const pvar_int_atExitDebug;
@@ -239,6 +242,13 @@ int ptest_registerRecordDeviceDriver(DBBASE *pbase)
     pvar_func_dbndInitialize();
     pvar_func_syncInitialize();
     pvar_func_tsInitialize();
+    pvar_func_register_func_calcspec();
+    pvar_func_register_func_execmd();
+    pvar_func_register_func_linspace();
+    pvar_func_register_func_range();
+    pvar_func_register_func_sumroi();
+    pvar_func_register_func_sumspec();
+    pvar_func_register_func_threshold();
     iocshRegisterVariable(vardefs);
     return 0;
 }
