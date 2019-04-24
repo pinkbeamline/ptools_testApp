@@ -1,0 +1,3 @@
+epicsEnvSet("IOC","iocptest")
+epicsEnvSet("TOP","/home/epics/IOCs/ptools_testApp")
+epicsEnvSet("EPICS_BASE","/home/epics/EPICS/base")
