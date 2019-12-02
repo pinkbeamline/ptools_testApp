@@ -10,3 +10,36 @@ record(aSub, "$(BL):$(DEV):execmd")
     field(NOA, "40")
 }
 
+record(waveform, "$(BL):$(DEV):ReverseSrc")
+{
+  field(FTVL, "DOUBLE")
+  field(NELM, "5")
+}
+
+record(waveform, "$(BL):$(DEV):ReverseDest")
+{
+  field(FTVL, "DOUBLE")
+  field(NELM, "5")
+}
+
+record(ao, "$(BL):$(DEV):ReverseDisable")
+{
+
+}
+
+record(aSub, "$(BL):$(DEV):ReverseSub")
+{
+  field(SNAM, "reversearray")
+  field(INPA, "$(BL):$(DEV):ReverseSrc CPP")
+  field(FTA, "DOUBLE")
+  field(NOA, "5")
+  field(INPB, "$(BL):$(DEV):ReverseSrc.NORD")
+  field(FTB, "DOUBLE")
+  field(NOB, "1")
+  field(INPC, "$(BL):$(DEV):ReverseDisable CPP")
+  field(FTC, "DOUBLE")
+  field(NOC, "1")
+  field(OUTA, "$(BL):$(DEV):ReverseDest PP")
+  field(FTVA, "DOUBLE")
+  field(NOVA, "5")
+}
